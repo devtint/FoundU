@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#245300">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    <title>FoundU-Dashboard</title>
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/components.css">
+
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="foundu-dashboard-page">
+    <!-- Navigation -->
+
+    <header>
+        <nav class="navbar dashboard-navbar">
+
+            <a href="dashboard.html" class="logo">
+                FoundU
+            </a>
+
+            <div class="nav-links">\n                <a href="chats.html" data-i18n="messages">Messages</a>
+                <a href="search.html" data-i18n="search">
+                    Search
+                </a>
+
+                <a href="my-reports.html" data-i18n="myReportsTitle">
+                    My Reports
+                </a>
+
+                <a href="profile.html" data-i18n="profile">
+                    Profile
+                </a>
+
+                <button type="button" id="logout-btn" class="logout-btn" data-i18n="logout">
+                    Logout
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="dashboard">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <p class="hero-label" data-i18n="campusLostFound">
+                Campus Lost & Found
+            </p>
+
+            <h1 id="welcome-message" >
+                Hello, Student
+            </h1>
+
+            <p data-i18n="helpItemsHome">
+                Let's help lost items find their way home.
+            </p>
+        </section>
+
+        <!-- Action Buttons -->
+        <section class="dashboard-actions">
+            <a href="report-lost.html" class="action-card lost-action">
+                <div class="action-icon">
+                    +
+                </div>
+
+                <div>
+                    <h2 data-i18n="reportLost">
+                        Report Lost
+                    </h2>
+
+                    <p data-i18n="reportLostDescription">
+                        Tell us about something you lost.
+                    </p>
+                </div>
+            </a>
+
+            <a href="report-found.html" class="action-card found-action">
+                <div class="action-icon">
+                    +
+                </div>
+
+                <div>
+                    <h2 data-i18n="reportFound">
+                        Report Found
+                    </h2>
+
+                    <p data-i18n="reportFoundDescription">
+                        Help someone find their found item.
+                    </p>
+                </div>
+            </a>
+        </section>
+
+        <!-- Search
+        <section class="dashboard-search">
+            <h2 data-i18n="findAnItem">
+                Find an Item
+            </h2>
+
+            <div class="search-box">
+                <input type="search" 
+                placeholder="Search lost or found items ... "
+                data-i18n-placeholder ="dashboardSearchPlaceholder">
+
+                <a href="search.html" class="search-button" data-i18n="search">
+                    Search
+                </a>
+            </div>
+        </section> -->
+
+        <!-- Categories -->
+        <section class="categories">
+            <div class="section-heading">
+                <h2 data-i18n="categories">
+                    Categories
+                </h2>
+            </div>
+
+            <div class="category-list">
+                <a href="search.html" class="category-card" data-i18n="electronics">
+                    Electronics
+                </a>
+
+                <a href="search.html" class="category-card" data-i18n="wallet">
+                    Wallets
+                </a>
+
+                <a href="search.html" class="category-card" data-i18n="keys">
+                    Keys
+                </a>
+
+                <a href="search.html" class="category-card" data-i18n="documents">
+                    Documents
+                </a>
+
+                <a href="search.html" class="category-card" data-i18n="accessories">
+                    Accessories
+                </a>
+
+                <a href="search.html" class="category-card" data-i18n="other">
+                    Other
+                </a>
+
+            </div>
+        </section>
+
+        <!-- Recent Items -->
+        <section class="recent-items">
+            <div class="section-heading">
+                <h2 data-i18n="recentItems">Recent Items</h2>
+                <a href="search.html" data-i18n="viewAll">
+                    View All
+                </a>
+            </div>
+
+            <div class="item-grid" id = "recent-items-container">
+                <!-- Firestore -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Mobile Navigation -->
+    <nav class="bottom-nav">
+
+        <a href="dashboard.html" class="active" data-i18n="home">
+            Home
+        </a>
+
+        <a href="search.html" data-i18n="search">
+            Search
+        </a>
+
+        <a href="my-reports.html" data-i18n="myReportsTitle">
+            My Reports
+        </a>
+        <a href="chats.html" data-i18n="messages">
+            Messages
+        </a>
+
+
+        <a href="profile.html" data-i18n="profile">
+            Profile
+        </a>
+
+        <button type="button" id="mobile-logout-btn" class="logout-btn" data-i18n="logout">
+            Logout
+        </button>
+
+    </nav>
+
+    <!-- Js -->
+    <script src="js/scripts.js"></script>
+    <script type="module" src="js/auth.js"></script>
+    <script type="module" src="js/auth-guard.js"></script>
+    <script type="module" src="js/dashboard.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/pwa.js"></script>
+</body>
+
+</html>

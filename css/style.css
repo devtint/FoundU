@@ -1,0 +1,465 @@
+/*body{}
+font{}
+colors{}
+links{}
+basic layout{}
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --primary-color: #245300;
+    --secondary-color: #DBEAFE;
+
+    --background-color: #F8FAFC;
+    --card-color: #FFFFFF;
+
+    --text-color: #1E293B;
+
+}
+
+
+body {
+
+    font-family: 'Poppins', sans-serif;
+
+    background-color: var(--background-color);
+
+    color: var(--text-color);
+
+}
+
+
+a {
+    text-decoration: none;
+}
+
+
+/* Navigation */
+
+.navbar {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 20px 8%;
+
+    background-color: white;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.nav-links {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.nav-links a {
+    color: var(--text-color);
+    font-weight: 500;
+    transition: 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+
+.nav-register {
+
+    background-color: var(--primary-color);
+
+    color: white !important;
+
+    padding: 10px 20px;
+
+    border-radius: 8px;
+
+}
+
+
+/* Hero */
+
+.hero {
+
+    min-height: 75vh;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 50px;
+
+    padding: 60px 8%;
+
+}
+
+/* Hero Section (Header Graphic Layout) */
+.hero-section {
+    position: relative;
+    height: 160px;
+    margin-bottom: 10px;
+}
+
+.hero-content {
+    display: flex;
+    height: 100%;
+    position: relative;
+}
+
+/* Left Content */
+.brand-header {
+    width: 55%;
+    padding-top: 5px;
+    z-index: 2;
+}
+
+.brand-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* .brand-wrapper{
+
+} */
+.sub-heading {
+    font-size: 8px;
+    letter-spacing: 0.5px;
+    color: var(--text-muted);
+    font-weight: 600;
+    display: block;
+}
+
+.brand-title h1 {
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.brand-title h1 .highlight {
+    color: #222;
+}
+
+.tagline {
+    margin: 2px 0 6px 0;
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.green-line {
+    width: 25px;
+    height: 3px;
+    background-color: var(--primary-color);
+    border-radius: 2px;
+}
+
+/* Building Photo*/
+.building-wrapper {
+    position: absolute;
+    right: -16px;
+    top: -10px;
+    width: 55%;
+    height: 170px;
+    /* Slanted cut path */
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+    overflow: hidden;
+}
+
+.building-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Form Container Card */
+.form-container {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 22px 18px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    position: relative;
+    z-index: 5;
+}
+
+.hero-content {
+
+    max-width: 600px;
+
+}
+
+
+.hero-label {
+
+    color: var(--primary-color);
+
+    font-weight: 600;
+
+    margin-bottom: 15px;
+
+}
+
+
+.hero h1 {
+
+    font-size: 52px;
+
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h1 span {
+
+    color: var(--primary-color);
+
+}
+
+
+.hero-description {
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+
+}
+
+
+.btn {
+
+    display: inline-block;
+
+    padding: 13px 24px;
+
+    border-radius: 8px;
+
+    font-weight: 600;
+
+}
+
+
+.primary-btn {
+
+    background-color: var(--primary-color);
+
+    color: white;
+
+}
+
+
+.secondary-btn {
+
+    background-color: var(--secondary-color);
+
+    color: var(--primary-color);
+
+}
+
+
+/* Image placeholder */
+
+.hero-image {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+
+.image-placeholder {
+
+    width: 300px;
+
+    height: 300px;
+
+    border-radius: 20px;
+
+    background-color: var(--secondary-color);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: var(--primary-color);
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+}
+
+
+/* About */
+
+.about {
+
+    background-color: white;
+
+    text-align: center;
+
+    padding: 60px 10%;
+
+}
+
+
+.about h2 {
+
+    margin-bottom: 15px;
+
+}
+
+
+.about p {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    line-height: 1.7;
+
+}
+
+
+/* Footer */
+
+footer {
+
+    text-align: center;
+
+    padding: 25px;
+
+    background-color: white;
+}
+
+#members{
+    text-align: center;
+}
+
+#members ul{
+list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#members li {
+    margin-bottom: 8px;
+}
+/* Item / Report Images */
+.item-card img,
+.report-card img,
+.item-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Bilingual language switcher */
+#language-switcher {
+    position: fixed;
+    top: 14px;
+    right: 18px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 9px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    font-size: 12px;
+}
+
+#language-switcher button {
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+    font-weight: 600;
+    padding: 3px 5px;
+    border-radius: 6px;
+}
+
+#language-switcher button.active {
+    background: #111827;
+    color: #fff;
+}
+
+@media (max-width: 600px) {
+    #language-switcher {
+        top: 8px;
+        right: 8px;
+        font-size: 11px;
+    }
+}
+
+/* foundu-language-layout-fix
+   The bilingual switcher is fixed above the page content so it does not
+   cover dashboard/navigation buttons. */
+@media (min-width:769px) {
+    body {
+        padding-top: 58px;
+    }
+}
+
+@media (max-width:768px) {
+    body {
+        padding-top: 54px;
+    }
+}

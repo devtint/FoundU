@@ -1,0 +1,26 @@
+{
+  "name": "FoundU - Campus Lost & Found",
+  "short_name": "FoundU",
+  "description": "A campus lost and found app for students to report, search, and reconnect lost items.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#F8FAFC",
+  "theme_color": "#245300",
+  "lang": "en",
+  "icons": [
+    {
+      "src": "./images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+/* FoundU direct chat */
+.chat-page, .chat-list-page { max-width: 900px; margin: 0 auto; padding: 24px 16px 90px; }
+.chat-container, .chat-list-container { background: #fff; border-radius: 16px; padding: 20px; box-shadow: 0 4px 18px rgba(0,0,0,.08); }
+.chat-header { display:flex; gap:16px; align-items:center; border-bottom:1px solid #eee; padding-bottom:16px; margin-bottom:16px; }
+.chat-header h1 { margin:0; }
+.chat-header p { margin:4px 0 0; opacity:.7; }
+.chat-messages { height:55vh; min-height:320px; overflow-y:auto; padding:10px; display:flex; flex-direction:column; gap:10px; background:#f7f7f7; border-radius:12px; }
+.chat-bubble { max-width:75%; padding:10px 14px; border-radius:16px; }
+.chat-bubble.mine { align-self:flex-end; background:#e8f0ff; }
+.chat-bubble.theirs { align-self:flex-start; background:#fff; border:1px solid #e6e6e6; }
+.chat-message-text { white-space:pre-wrap; overflow-wrap:anywhere; }
+.chat-bubble small { display:block; margin-top:4px; opacity:.6; font-size:.75rem; }
+.chat-input-row { display:flex; gap:10px; margin-top:12px; }
+.chat-input-row input { flex:1; min-width:0; padding:12px 14px; border:1px solid #ccc; border-radius:10px; }
+.chat-list-item { display:flex; align-items:center; gap:12px; padding:14px 4px; border-bottom:1px solid #eee; text-decoration:none; color:inherit; }
+.chat-avatar { width:44px; height:44px; border-radius:50%; display:grid; place-items:center; background:#eee; font-weight:700; }
+.chat-list-content { flex:1; min-width:0; }
+.chat-list-content strong, .chat-list-content span { display:block; }
+.chat-list-content span { opacity:.65; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; margin-top:3px; }
+.empty-state { text-align:center; opacity:.65; padding:30px 10px; }
+@media (max-width:600px) {
+  .chat-container, .chat-list-container { padding:14px; }
+  .chat-input-row .btn { padding-left:14px; padding-right:14px; }
+  .chat-bubble { max-width:85%; }
+}

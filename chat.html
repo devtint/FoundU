@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - FoundU</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <a href="dashboard.html" class="logo">FoundU</a>
+        <div class="nav-links">
+            <a href="dashboard.html" data-i18n="home">Home</a>
+            <a href="chats.html" data-i18n="messages">Messages</a>
+            <a href="profile.html" data-i18n="profile">Profile</a>
+        </div>
+    </nav>
+</header>
+
+<main class="chat-page">
+    <section class="chat-container">
+        <div class="chat-header">
+            <a href="chats.html" class="btn secondary-btn" data-i18n="back">Back</a>
+            <div>
+                <h1 id="chat-title" data-i18n="chat">Chat</h1>
+                <p id="chat-subtitle"></p>
+            </div>
+        </div>
+
+        <div id="chat-messages" class="chat-messages">
+            <p class="form-message" data-i18n="loadingMessages">Loading messages...</p>
+        </div>
+
+        <form id="chat-form" class="chat-input-row">
+            <input id="chat-input" type="text" maxlength="1000"
+                   placeholder="Type a message..." data-i18n-placeholder="typeMessage" autocomplete="off" required>
+            <button type="submit" class="btn primary-btn" data-i18n="sendMessage">Send</button>
+        </form>
+    </section>
+</main>
+
+<nav class="bottom-nav">
+    <a href="dashboard.html" data-i18n="home">Home</a>
+    <a href="search.html" data-i18n="search">Search</a>
+    <a href="chats.html" class="active" data-i18n="messages">Messages</a>
+    <a href="profile.html" data-i18n="profile">Profile</a>
+</nav>
+
+<script src="js/scripts.js"></script>
+<script type="module" src="js/chat.js"></script>
+<script src="js/language.js"></script>
+<script src="js/pwa.js"></script>
+</body>
+</html>

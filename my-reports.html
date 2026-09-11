@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#245300">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    <title>FoundU - My Report</title>
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a href="dashboard.html" class="logo">
+                FoundU
+            </a>
+
+
+            <div class="nav-links">
+
+                <a href="dashboard.html" data-i18n="home">
+                    Home
+                </a>
+
+                <a href="search.html" data-i18n="search">
+                    Search
+                </a>
+
+                <a href="my-reports.html" data-i18n="myReportsTitle">
+                    My Reports
+                </a>
+
+                <a href="profile.html" data-i18n="profile">
+                    Profile
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- Main -->
+
+    <main class="reports-page">
+
+
+        <!-- Header -->
+
+        <section class="page-header">
+
+            <h1 data-i18n="myReportsTitle">
+                My Reports
+            </h1>
+
+            <p data-i18n="myReportDescription">
+                Manage the lost and found items you have reported.
+            </p>
+
+        </section>
+
+
+
+        <!-- Report Tabs -->
+
+        <div class="report-tabs">
+
+            <button type = "button"
+            class="report-tab active" 
+            id="all-tab" data-i18n="all">
+                All
+            </button>
+
+            <button 
+            type="button"
+            class="report-tab"
+            id="lost-tab" data-i18n="lost">
+                Lost
+            </button>
+
+            <button 
+            type="button"
+            class="report-tab"
+            id="found-tab" data-i18n="found">
+                Found
+            </button>
+
+        </div>
+
+
+
+        <!-- Reports -->
+
+        <section id = "my-report-list" class="my-report-list">
+            <p>Loading your reports...</p>
+        </section>
+
+
+    </main>
+
+
+
+    <!-- Mobile Navigation -->
+
+    <nav class="bottom-nav">
+
+        <a href="dashboard.html" data-i18n="home">
+            Home
+        </a>
+
+        <a href="search.html" data-i18n="search">
+            Search
+        </a>
+
+        <a href="my-reports.html" class="active">
+            Reports
+        </a>
+        <a href="chats.html" data-i18n="messages">
+            Messages
+        </a>
+
+
+        <a href="profile.html" data-i18n="profile">
+            Profile
+        </a>
+
+    </nav>
+
+    <script src="js/scripts.js"></script>
+    <script type="module" src="js/my-reports.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/pwa.js"></script>
+</body>
+
+</html>

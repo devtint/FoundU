@@ -1,0 +1,32 @@
+FoundU Direct Chat – Firestore rules to add to your existing Firestore rules
+
+The chat feature uses:
+conversations/{conversationId}
+conversations/{conversationId}/messages/{messageId}
+
+Add these rules inside your existing `match /databases/{database}/documents` block.
+Do not replace your existing rules for items/users unless you intend to.
+
+match /conversations/{conversationId} {
+  allow read, create, update: if request.auth != null
+    && request.auth.uid in request.resource.data.participants;
+
+  allow delete: if false;
+
+  match /messages/{messageId} {
+    allow read: if request.auth != null
+      && request.auth.uid in get(/databases/$(database)/documents/conversations/$(conversationId)).data.participants;
+
+    allow create: if request.auth != null
+      && request.auth.uid == request.resource.data.senderId
+      && request.auth.uid in get(/databases/$(database)/documents/conversations/$(conversationId)).data.participants
+      && request.resource.data.receiverId in get(/databases/$(database)/documents/conversations/$(conversationId)).data.participants;
+
+    allow update, delete: if false;
+  }
+}
+
+Important:
+1. Every item report should contain `userId` (your existing report-lost.js and report-found.js already save it).
+2. Deploy these rules in Firebase Console > Firestore Database > Rules.
+3. The app never opens a mailto link for chat. Messages are stored in Firestore and displayed in FoundU.

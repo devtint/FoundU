@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#245300">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+
+    <title>FoundU</title>
+
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- Existing CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+    <!-- =========================================
+         INDEX PAGE ONLY CSS
+         No other CSS files need to be changed
+    ========================================== -->
+
+    <style>
+        /* ==============================
+           INDEX PAGE HERO FIX
+        ============================== */
+
+        .hero {
+            min-height: 75vh;
+
+            display: flex !important;
+            flex-direction: row !important;
+
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 70px;
+
+            padding: 70px 8%;
+        }
+
+
+        /* IMPORTANT:
+           Override the old .hero-content {
+           display: flex;
+           } */
+
+        .hero .hero-content {
+            display: block !important;
+
+            position: static !important;
+
+            height: auto !important;
+
+            width: 50%;
+
+            max-width: 600px;
+
+            flex: 1;
+        }
+
+
+        /* Small heading */
+
+        .hero .hero-label {
+            display: block;
+
+            color: #245300;
+
+            font-size: 17px;
+
+            font-weight: 600;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* Main heading */
+
+        .hero h1 {
+            display: block;
+
+            font-size: 54px;
+
+            line-height: 1.15;
+
+            font-weight: 700;
+
+            margin: 0 0 22px 0;
+
+            color: #1E293B;
+        }
+
+
+        .hero h1 span {
+            color: #245300;
+        }
+
+
+        /* Description */
+
+        .hero .hero-description {
+            display: block;
+
+            max-width: 520px;
+
+            font-size: 18px;
+
+            line-height: 1.7;
+
+            color: #475569;
+
+            margin: 0 0 30px 0;
+        }
+
+
+        /* Buttons */
+
+        .hero .hero-buttons {
+            display: flex !important;
+
+            flex-direction: row !important;
+
+            align-items: center;
+
+            gap: 15px;
+
+            width: auto;
+        }
+
+
+        .hero .btn {
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: auto;
+
+            min-width: 130px;
+
+            padding: 13px 24px;
+
+            border-radius: 8px;
+
+            font-weight: 600;
+
+            text-align: center;
+
+            white-space: nowrap;
+        }
+
+
+        .hero .primary-btn {
+            background-color: #245300;
+
+            color: white;
+        }
+
+
+        .hero .secondary-btn {
+            background-color: #DBEAFE;
+
+            color: #245300;
+        }
+
+
+        /* ==============================
+           RIGHT SIDE LOGO
+        ============================== */
+
+        .hero .hero-image {
+            display: flex !important;
+
+            flex: 1;
+
+            width: 50%;
+
+            min-width: 350px;
+
+            justify-content: center;
+
+            align-items: center;
+
+            position: static;
+        }
+
+
+        .hero .image-placeholder {
+            width: 380px !important;
+
+            height: 380px !important;
+
+            padding: 25px;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background-color: #DBEAFE;
+
+            border-radius: 30px;
+
+            overflow: hidden;
+        }
+
+
+        .hero .image-placeholder img {
+            width: 100% !important;
+
+            height: 100% !important;
+
+            max-width: 100%;
+
+            max-height: 100%;
+
+            object-fit: contain !important;
+
+            display: block;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+        ============================== */
+
+        .navbar {
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+        }
+
+
+        .navbar .logo {
+            display: flex;
+
+            align-items: center;
+        }
+
+
+        .navbar .logo img {
+            height: 45px;
+
+            width: auto;
+
+            object-fit: contain;
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media (max-width: 768px) {
+
+            .hero {
+                min-height: auto;
+
+                flex-direction: column !important;
+
+                text-align: center;
+
+                gap: 45px;
+
+                padding: 50px 6%;
+            }
+
+
+            .hero .hero-content {
+                width: 100%;
+
+                max-width: 600px;
+            }
+
+
+            .hero .hero-label {
+                font-size: 15px;
+            }
+
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+
+            .hero .hero-description {
+                margin-left: auto;
+
+                margin-right: auto;
+
+                font-size: 16px;
+            }
+
+
+            .hero .hero-buttons {
+                justify-content: center;
+
+                flex-wrap: wrap;
+            }
+
+
+            .hero .hero-image {
+                width: 100%;
+
+                min-width: 0;
+            }
+
+
+            .hero .image-placeholder {
+                width: 260px !important;
+
+                height: 260px !important;
+            }
+
+        }
+
+
+        /* ==============================
+           SMALL PHONE
+        ============================== */
+
+        @media (max-width: 480px) {
+
+            .hero {
+                padding: 40px 5%;
+            }
+
+
+            .hero h1 {
+                font-size: 34px;
+            }
+
+
+            .hero .hero-buttons {
+                flex-direction: column !important;
+
+                width: 100%;
+            }
+
+
+            .hero .btn {
+                width: 100%;
+
+                max-width: 280px;
+            }
+
+
+            .hero .image-placeholder {
+                width: 220px !important;
+
+                height: 220px !important;
+            }
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <!-- FoundU Logo -->
+
+            <a href="index.html" class="logo">
+
+                <img src="images/logo.png" alt="FoundU Logo">
+
+            </a>
+
+
+            <!-- Navigation -->
+
+            <div class="nav-links">
+
+                <a href="login.html" data-i18n="login">
+                    Login
+                </a>
+
+
+                <a href="register.html" class="nav-register" data-i18n="register">
+                    Register
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================================
+         MAIN
+    ========================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             HERO
+        ====================================== -->
+
+        <section class="hero">
+
+
+            <!-- LEFT SIDE -->
+
+            <div class="hero-content">
+
+
+                <!-- Small title -->
+
+                <p class="hero-label">
+
+                    Campus Lost &amp; Found
+
+                </p>
+
+
+                <!-- Main title -->
+
+                <h1>
+
+                    Lost today,
+                    <span>found tomorrow.</span>
+
+                </h1>
+
+
+                <!-- Description -->
+
+                <p class="hero-description">
+
+                    FoundU helps students report, search,
+                    and recover lost items around campus.
+
+                </p>
+
+
+                <!-- Buttons -->
+
+                <div class="hero-buttons">
+
+
+                    <a href="login.html" class="btn primary-btn">
+
+                        Get Started
+
+                    </a>
+
+
+                    <a href="register.html" class="btn secondary-btn">
+
+                        Create Account
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="hero-image">
+
+
+                <div class="image-placeholder">
+
+                    <img src="images/logo.png" alt="FoundU Logo">
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =====================================
+             ABOUT
+        ====================================== -->
+
+        <section class="about">
+
+
+            <h2>
+
+                How FoundU Helps
+
+            </h2>
+
+
+            <p>
+
+                A simple way for students to report
+                lost items, share found items, and
+                reconnect belongings with their owners.
+
+            </p>
+
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div id="members">
+            <p>
+
+            <h3>Members</h3>
+            <ul>
+                <li>Zu Zu Sandi - 240702404491</li>
+                <li>Myat Phyu Sin Thant - 240702404686</li>
+                <li>Pyae Phyoe Naing - 240702404806</li>
+                <li>Chan Myae Thaw - 250702401730</li>
+                <li>Phyo Thinzar - 250702402023</li>
+                <li>Ali Nikaji - 680702402798</li>
+                <li>Aye Sandar Kyaw - 250702404349</li>
+            </ul>
+
+            </p>
+
+        </div>
+
+
+    </footer>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================== -->
+
+    <script src="js/scripts.js"></script>
+
+    <script src="js/language.js"></script>
+
+
+    <script src="js/pwa.js"></script>
+</body>
+
+</html>

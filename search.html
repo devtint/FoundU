@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#245300">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="apple-touch-icon" href="images/icon-192.png">
+    <title>Search Items - FoundU</title>
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <a href="dashboard.html" class="logo">
+                FoundU
+            </a>
+
+            <div class="nav-links">
+                <a href="dashboard.html" data-i18n="home">
+                    Home
+                </a>
+
+                <a href="search.html" data-i18n="search">
+                    Search
+                </a>
+
+                <a href="my-reports.html" data-i18n="myReportsTitle">
+                    My Reports
+                </a>
+
+                <a href="profile.html" data-i18n="profile">
+                    Profile
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main -->
+    <main class="search-page">
+
+        <!-- Page Header -->
+
+        <section class="page-header">
+            <p class="hero-label">Campus Lost & Found</p>
+            <h1>
+                FoundU
+            </h1>
+
+            <p data-i18n="searchDescription">
+                Search for lost and found items around campus.
+            </p>
+        </section>
+
+        <!-- Search & Filters -->
+        <section class="search-section">
+            <div class="main-search">
+                <input type="search" id="search-input" data-i18n-placeholder="searchPlaceholder"
+                    placeholder="Search by item name ... ">
+                <button type="button" id="search-button" class="btn primary-btn" data-i18n="search">
+                    Search
+                </button>
+            </div>
+
+            <div class="filters">
+                <!-- Category -->
+                <div class="filter-group">
+                    <label for="category-filter" data-i18n="category">
+                        Category
+                    </label>
+
+                    <select id="category-filter">
+                        <option value="all" data-i18n="allCategories">
+                            All Categories
+                        </option>
+
+                        <option value="Electronics" data-i18n="electronics">
+                            Electronics
+                        </option>
+
+                        <option value="Wallets" data-i18n="wallet">
+                            Wallets
+                        </option>
+
+                        <option value="Keys" data-i18n="keys">
+                            Keys
+                        </option>
+
+                        <option value="Documents" data-i18n="documents">
+                            Documents
+                        </option>
+
+                        <option value="Accessories" data-i18n="accessories">
+                            Accessories
+                        </option>
+
+                        <option value="Other" data-i18n="other">
+                            Other
+                        </option>
+                    </select>
+                </div>
+
+                <!-- Status -->
+                <div class="filter-group">
+                    <label for="status-filter" data-i18n="type">
+                        Type
+                    </label>
+
+                    <select id="status-filter">
+
+                        <option value="all" data-i18n="all">
+                            All
+                        </option>
+
+                        <option value="lost" data-i18n="lost">
+                            Lost
+                        </option>
+
+                        <option value="found" data-i18n="found">
+                            Found
+                        </option>
+
+                    </select>
+                </div>
+
+                <!-- Location -->
+
+                <div class="filter-group">
+
+                    <label for="location-filter" data-i18n="location">
+                        Location
+                    </label>
+
+                    <select id="location-filter">
+
+                        <option value="all" data-i18n="allLocations">
+                            All Locations
+                        </option>
+
+                        <option value="Library" data-i18n="library">
+                            Library
+                        </option>
+
+                        <option value="Cafeteria" data-i18n="cafeteria">
+                            Cafeteria
+                        </option>
+
+                        <option value="Building A" data-i18n="buildingA">
+                            Building A
+                        </option>
+
+                        <option value="Building B" data-i18n="buildingB">
+                            Building B
+                        </option>
+
+                        <option value="Parking Area" data-i18n="parkingArea">
+                            Parking Area
+                        </option>
+
+                        <option value="Other" data-i18n="other">
+                            Other
+                        </option>
+
+                        <option value="Other" data-i18n="other">
+                            Other
+                        </option>
+                    </select>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Result Message -->
+
+        <div class="search-result-header">
+
+            <p id="search-message" class="form-message">
+                Loading items...
+            </p>
+
+        </div>
+
+
+        <!-- Items -->
+
+        <section id="items-container" class="items-grid">
+
+        </section>
+
+    </main>
+
+    <!-- Mobile Navigation -->
+
+    <nav class="bottom-nav">
+
+        <a href="dashboard.html" data-i18n="home">
+            Home
+        </a>
+
+        <a href="search.html" class="active" data-i18n="search">
+            Search
+        </a>
+
+        <a href="my-reports.html" data-i18n="myReportsTitle">
+            Reports
+        </a>
+        <a href="chats.html" data-i18n="messages">
+            Messages
+        </a>
+
+
+        <a href="profile.html" data-i18n="profile">
+            Profile
+        </a>
+
+    </nav>
+
+
+
+    <!--<script src="js/script.js"></script>-->
+    <script type="module" src="js/search.js"></script>
+
+    <script src="js/language.js"></script>
+    <script src="js/pwa.js"></script>
+</body>
+
+</html>
