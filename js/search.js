@@ -98,7 +98,7 @@ async function loadItems() {
             allItems
         );
 
-        displayItems(allItems);
+        filterItems();
 
     } catch (error) {
 
@@ -535,7 +535,31 @@ function escapeHTML(text) {
 
 
 // ========================================
+// URL PARAMETERS
+// ========================================
+
+function applyURLFilters() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoryParam = urlParams.get("category");
+
+    if (categoryParam && categoryFilter) {
+        const matchingOption = Array.from(categoryFilter.options).find(
+            (opt) => opt.value.toLowerCase() === categoryParam.toLowerCase()
+        );
+        if (matchingOption) {
+            categoryFilter.value = matchingOption.value;
+        }
+    }
+}
+
+window.addEventListener("popstate", () => {
+    applyURLFilters();
+    filterItems();
+});
+
+// ========================================
 // START
 // ========================================
 
+applyURLFilters();
 loadItems();
